@@ -1,0 +1,30 @@
+
+{
+    "name":"product_server"
+  , "version":"0.0.1"
+  , "description":"receive user-end's url request and insert records into database"
+  , "homepage":""
+  , "main":"index.js"
+  , "bugs":{
+            "email":"jonishaso96@gmail.com"
+            }
+  , "author":{
+               "name":"Gorden Gao"
+             , "email":"jonishaso96.com"
+            }
+  , "config":{
+              "http_port":8008
+              ,"udp_multicast_address":"230.1.2.1"
+              ,"udp_multicast_port":9900
+              ,"database_name_prefix":"mongodb://localhost/product_info_"
+              ,"url_upload_sn":"/upload"
+              ,"url_upload_wifi":"/wifi"
+              ,"support_version":["07","02"]
+            }
+  , "dependencies":
+              {
+                 "express":"4.12.X"
+                , "mongoose":"4.0.X"
+              }
+}
+

@@ -1,0 +1,44 @@
+{
+    "name": "CentralControlserver"
+  , "version": "0.2.0"
+  , "description": "managing connection between user-side and productServer."
+  , "main": "index.js"
+  , "author": {
+      "name": "Gorden Gao",
+      "email": "jonishaso@hotmail.com"
+    }
+  , "bugs": {
+      "email": "jonishaso@hotmail.com"
+    }
+  ,"configure":{
+
+      "peer":{
+         "sendPort":8000
+        ,"sendAddress":"230.1.2.1"
+        ,"listenPort":8000
+        ,"listenAddress":"230.1.2.1"
+        ,"heartBeatPort":11000
+        ,"heartBeatAddress":"230.1.2.4"
+        ,"checkTimer":1000
+        ,"multicastTimer":500
+        ,"heartBeatTimer":5000
+      }
+
+      ,"product":{
+          "listenPort":9900
+        , "listenAddress":"230.1.2.3"
+        , "freshListInterval":5000
+      }
+
+      ,"user":{
+          "sendPort":9000
+        , "listenPort":10000
+        , "listenAddress":"230.1.2.2"
+      }
+      
+    }
+
+  , "dependencies":{
+      "express":"4.12.X"
+    }
+}
